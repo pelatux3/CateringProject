@@ -15,7 +15,7 @@ public class UserValidator implements Validator {
     final Integer MAX_NAME_LENGTH = 100;
     final Integer MIN_NAME_LENGTH = 2;
 
-    @Override
+    
     public void validate(Object o, Errors errors) {
         User user = (User) o;
         String nome = user.getNome().trim();
@@ -32,7 +32,7 @@ public class UserValidator implements Validator {
             errors.rejectValue("cognome", "size");
     }
 
-    @Override
+    
     public boolean supports(Class<?> clazz) {
         return User.class.equals(clazz);
     }

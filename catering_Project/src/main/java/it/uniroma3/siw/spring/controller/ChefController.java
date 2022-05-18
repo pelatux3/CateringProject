@@ -34,7 +34,7 @@ public class ChefController {
 
 	    @RequestMapping(value = "/chef/{id}", method = RequestMethod.GET)
 	    public String getChef(@PathVariable("id") Long id, Model model) {
-	    	Chef a=this.chefService.ArtistaPerId(id);
+	    	Chef c=this.chefService.ArtistaPerId(id);
 	    	model.addAttribute("chef", c);
 	    //	model.addAttribute("opereArtista",c.getOpere());
 	    	return "chef.html";

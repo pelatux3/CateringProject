@@ -18,13 +18,13 @@ public class BuffetService {
 	private BuffetRepository buffetRepository; 
 	
 	@Transactional
-	public Buffet inserisci(Buffet bufet) {
+	public Buffet inserisci(Buffet buffet) {
 		return buffetRepository.save(buffet);
 	}
 	
 	@Transactional
 	public List<Buffet> buffetPerNome(String nome) {
-		return buffetRepository.findByNome(nome);
+		return buffetRepository.findByName(nome);
 	}
 
 	@Transactional
@@ -43,7 +43,7 @@ public class BuffetService {
 
 	@Transactional
 	public boolean alreadyExists(Buffet buffet) {
-		List<Buffet> buffets = this.buffetRepository.findByNome(buffet.getNome());
+		List<Buffet> buffets = this.buffetRepository.findByName(buffet.getNome());
 		if (buffets.size() > 0)
 			return true;
 		else 

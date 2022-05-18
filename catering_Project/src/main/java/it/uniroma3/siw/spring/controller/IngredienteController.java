@@ -34,7 +34,7 @@ public class IngredienteController {
 
 	    @RequestMapping(value = "/ingrediente/{id}", method = RequestMethod.GET)
 	    public String getIngrediente(@PathVariable("id") Long id, Model model) {
-	    	Artista a=this.ingredienteService.IngredientePerId(id);
+	    	Ingrediente i=this.ingredienteService.IngredientePerId(id);
 	    	model.addAttribute("ingrediente", i);
 	    //	model.addAttribute("opereArtista",a.getOpere());
 	    	return "ingrediente.html";

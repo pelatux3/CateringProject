@@ -1,5 +1,12 @@
 package it.uniroma3.siw.spring.repository;
 
-public class BuffetRepository {
+import java.util.List;
 
+import org.springframework.data.repository.CrudRepository;
+
+import it.uniroma3.siw.spring.model.Buffet;
+
+public interface BuffetRepository extends CrudRepository<Buffet, Long>{
+	
+	public List<Buffet> findByName(String name);
 }

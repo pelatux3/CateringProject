@@ -34,7 +34,7 @@ public class PiattoService {
 
 	@Transactional
 	public Piatto PiattoPerId(Long id) {
-		Optional<Piatto> optional = piatoRepository.findById(id);
+		Optional<Piatto> optional = piattoRepository.findById(id);
 		if (optional.isPresent())
 			return optional.get();
 		else 

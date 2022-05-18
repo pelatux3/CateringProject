@@ -16,11 +16,13 @@ import it.uniroma3.siw.spring.service.BuffetService;
 @Component
 public class BuffetValidator implements Validator {
 	@Autowired
-	private BuffetService artistaService;
+	private BuffetService buffetService;
+
+
 	
     private static final Logger logger = LoggerFactory.getLogger(BuffetValidator.class);
 
-	@Override
+	
 	public void validate(Object o, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "required");
@@ -34,7 +36,7 @@ public class BuffetValidator implements Validator {
 		}
 	}
 
-	@Override
+	
 	public boolean supports(Class<?> aClass) {
 		return Buffet.class.equals(aClass);
 	}

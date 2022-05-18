@@ -23,7 +23,7 @@ public class CredentialsValidator implements Validator {
     final Integer MAX_PASSWORD_LENGTH = 20;
     final Integer MIN_PASSWORD_LENGTH = 6;
 
-    @Override
+    
     public void validate(Object o, Errors errors) {
         Credentials credentials = (Credentials) o;
         String username = credentials.getUsername().trim();
@@ -42,7 +42,7 @@ public class CredentialsValidator implements Validator {
             errors.rejectValue("password", "size");
     }
 
-    @Override
+    
     public boolean supports(Class<?> clazz) {
         return User.class.equals(clazz);
     }

@@ -24,7 +24,7 @@ public class ChefService {
 	
 	@Transactional
 	public List<Chef> studentiPerNomeAndCognome(String nome, String cognome) {
-		return vhefRepository.findByNomeAndCognome(nome, cognome);
+		return chefRepository.findByNomeAndCognome(nome, cognome);
 	}
 
 	@Transactional

@@ -47,7 +47,7 @@ public class PiattoController {
 	    }
 	    
 	    @RequestMapping(value = "/admin/piatto", method = RequestMethod.POST)
-	    public String newPiatto(@ModelAttribute("piatto") Piatto Piatto, 
+	    public String newPiatto(@ModelAttribute("piatto") Piatto piatto, 
 	    									Model model, BindingResult bindingResult) {
 	    	this.piattoValidator.validate(piatto, bindingResult);
 	        if (!bindingResult.hasErrors()) {

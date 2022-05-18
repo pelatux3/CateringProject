@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 
 @Entity
@@ -23,6 +24,9 @@ public class Piatto {
 	
 	@Column(nullable=false)
 	private String ingrediente;
+	
+	@ManyToOne
+	private Buffet buffet;
 
 	public long getId() {
 		return id;

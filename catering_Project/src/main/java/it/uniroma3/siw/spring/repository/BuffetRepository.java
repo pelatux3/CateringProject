@@ -8,5 +8,5 @@ import it.uniroma3.siw.spring.model.Buffet;
 
 public interface BuffetRepository extends CrudRepository<Buffet, Long>{
 	
-	public List<Buffet> findByName(String name);
+	public List<Buffet> findByNome(String name);
 }

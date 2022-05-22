@@ -25,7 +25,7 @@ public class Chef {
 	private String cognome;
 	
 	@Column(nullable=false)
-	private String nazionalità;
+	private String nazionalita;
 	
 	@OneToMany
 	private List<Buffet> buffets;
@@ -54,12 +54,12 @@ public class Chef {
 		this.cognome = cognome;
 	}
 
-	public String getNazionalità() {
-		return nazionalità;
+	public String getNazionalita() {
+		return nazionalita;
 	}
 
-	public void setNazionalità(String nazionalità) {
-		this.nazionalità = nazionalità;
+	public void setNazionalita(String nazionalita) {
+		this.nazionalita= nazionalita;
 	}
 	
 }
